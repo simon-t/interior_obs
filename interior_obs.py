@@ -28,7 +28,6 @@ classifier = svm.SVC()
 classifier.fit(inp, labels)
 
 while True:
-    #t, w = random.choice(inp)
     t, w = random.uniform(20., 100.), random.uniform(2., 120.)
     m = classifier.predict([(t, w)])[0]
     print('{} deg C, {} kg => {}child'.format(t, w, '' if m else 'not '))
